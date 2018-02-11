@@ -31,3 +31,24 @@ def calc(*numbers):
     return sum
 ```
 - Python允许你在list或tuple前面加一个 * 号，把list或tuple的元素变成可变参数传进去
+
+##### 关键字参数
+- 关键字参数用 ** 表示
+- 关键字参数的接受对象是字典
+```
+def person(name, age, **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+```
+
+
+##### 命名关键字参数
+```
+def person(name, age, **kw):
+    if 'city' in kw:
+        # 有city参数
+        pass
+    if 'job' in kw:
+        # 有job参数
+        pass
+    print('name:', name, 'age:', age, 'other:', kw)
+```
